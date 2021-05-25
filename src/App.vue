@@ -273,6 +273,7 @@
   background-color: whitesmoke;
   position: relative;
   bottom: 3px;
+  margin-left: 7px;
 }
 .description {
   font-size: 7px;
