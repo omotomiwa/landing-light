@@ -145,6 +145,9 @@
 </template>
 
 <style scoped>
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+}
 .nav-item.nav-item.nav-item a {
   color: black;
   font-size: 26px;
