@@ -3,12 +3,13 @@
     <b-navbar toggleable="sm">
       <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
       <b-collapse id="nav-text-collapse" class="justify-content-end" is-nav>
-        <b-nav align="right" class="my-3 p-3 ml-3 ml-lg-0  justify-content-end">
-          <b-nav-item>Trips</b-nav-item>
-          <b-nav-item>Recently Viewed</b-nav-item>
-          <b-nav-item>Bookings</b-nav-item>
+        <b-nav align="right" class="my-3 p-3 mr-4 ml-lg-0  justify-content-end">
+          <b-nav-item class="navigation-links">TRIPS</b-nav-item>
+          <b-nav-item class="navigation-links">RECENTLY VIEWED</b-nav-item>
+          <b-nav-item class="navigation-links">BOOKINGS</b-nav-item>
           <b-nav-item>
             <b-avatar
+              class="ml-4"
               src="https://placekitten.com/300/300"
               size="3rem"
             ></b-avatar
@@ -25,10 +26,10 @@
         <v-flex xs12 md6 lg6 class=" sm-pa-2">
           <v-container>
             <h4><b>Payment Information</b></h4>
-            <p class="paymentMethod">Choose your method of payment</p>
+            <p class="paymentMethod">Choose your method of payment.</p>
             <br />
 
-            <div class="card">
+            <div  xs12 md6 lg6 class="card">
               <div class="cardNumber">CARD NUMBER</div>
               <div class="cardDigits">4324 5433 9382 1030</div>
               <div class="paywave svg"></div>
@@ -51,11 +52,13 @@
         </v-flex>
         <v-flex xs12 md6 lg6 class="my-2 ">
           <div class="logoContainer">
-            <div class="visa"><p class="visaText">VISA</p></div>
+            <div class="visa">
+              <img src="/assets/visa.png" height="30px" width="27px" class="visa-image">
+            </div>
             <div class="discover">
-              <span class="description d">DISC</span
-              ><span class="description o">O</span
-              ><span class="description v">VER</span>
+
+               <img src="/assets/discover.png"  height="8px" width="30px" class="discover-image">
+              
             </div>
             <div class="circle"></div>
             <div class="paypal"></div>
@@ -147,12 +150,15 @@
   font-size: 26px;
   font-weight: 500;
 }
+.navigation-links{
+  font-size: 30px;
+}
 .paymentMethod {
   color: grey;
 }
 .card {
   height: 275px;
-  width: 420px;
+  width: 380px;
   background-image: linear-gradient(
     to right top,
     #e3693e,
@@ -259,13 +265,9 @@
   width: 29px;
   background-color: darkblue;
 }
-.visaText {
-  color: white;
-  font-size: 10px;
-  background-position: center;
-  text-align: center;
-  margin-top: 3px;
-  font-weight: 700;
+.visa-image{
+  position: relative;
+  bottom: 4px;
 }
 .discover {
   height: 25px;
@@ -274,6 +276,10 @@
   position: relative;
   bottom: 3px;
   margin-left: 7px;
+}
+.discover-image{
+  position: relative;
+  left: 5px;
 }
 .description {
   font-size: 7px;
@@ -305,16 +311,21 @@
 }
 .headers {
   margin-left: 15px;
+   font-weight: 500;
 }
 .inputs {
   position: relative;
   bottom: 8px;
   background-color: whitesmoke;
   color: black;
-  font-size: 17px;
+  font-size: 15px;
+  font-weight: 500;
+  
 }
 .radio {
   font-size: 14px;
+  font-weight: 500;
+  font-size: 15px;
 }
 .button {
   height: 65px;
